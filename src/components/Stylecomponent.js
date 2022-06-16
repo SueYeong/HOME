@@ -26,7 +26,7 @@ const Wrap = styled.div`
 `;
 
 const Box = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
 `;
 export const Stylecomponent = ({ Styledata }) => {
   return (
