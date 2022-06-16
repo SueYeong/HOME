@@ -12,7 +12,7 @@ const Div = styled.div`
 
 const Con_wrap = styled.div`
   width: 1400px;
-  height: 500px;
+  height: 400px;
   display: flex;
   justify-content: space-between;
 `;
@@ -20,9 +20,9 @@ const Con_wrap = styled.div`
 const Wrap = styled.div`
   display: flex;
   width: 400px;
-  height: 700px;
   flex-direction: column;
   color: ${mainStyle.color};
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 `;
 
 const Box = styled.div`
@@ -33,35 +33,41 @@ export const Stylecomponent = ({ Styledata }) => {
     <Div>
       <Con_wrap>
         {Styledata.map((con) => (
-          <Wrap>
-            <img
-              src={con.img}
-              style={{
-                width: "100%",
-                height: "200px",
-              }}
-            />
-            <Box>
-              <h3
+          <a
+            href={con.url}
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <Wrap>
+              <img
+                src={con.img}
                 style={{
-                  fontSize: "25px",
-                  marginLeft: "20px",
+                  width: "100%",
+                  height: "200px",
                 }}
-              >
-                {con.title}
-              </h3>
-              <p
-                style={{
-                  fontSize: "15px",
-                  widows: "100px",
-                  height: "100px",
-                  marginLeft: "20px",
-                }}
-              >
-                {con.explain}
-              </p>
-            </Box>
-          </Wrap>
+              />
+              <Box>
+                <h3
+                  style={{
+                    fontSize: "25px",
+                    marginLeft: "20px",
+                  }}
+                >
+                  {con.title}
+                </h3>
+                <p
+                  style={{
+                    fontSize: "12px",
+                    height: "100px",
+                    marginLeft: "20px",
+                  }}
+                >
+                  {con.explain}
+                </p>
+              </Box>
+            </Wrap>
+          </a>
         ))}
       </Con_wrap>
     </Div>
