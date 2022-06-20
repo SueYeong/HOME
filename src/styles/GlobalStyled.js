@@ -6,9 +6,8 @@ export const mainStyle = {
 };
 
 export const GlobalStyled = createGlobalStyle`
-    ${reset}
-
-    *{
-        box-sizing: border-box;
-    }
+  ${reset}
+  *{
+      box-sizing: border-box;
+  }
 `;
